@@ -1,0 +1,209 @@
+---
+_$_import: auth
+---
+
+You can know Ohm's law cold and still stumble on licensing questions — or fail a practical task you wire every week on the job because exam conditions are different. This chapter covers the remaining written topics (**State Laws & Rules**), what Utah's **practical exam** expects, and how to study for the combined Journeyman written test.
+
+## Utah Licensing Landscape
+
+Utah DOPL licenses several electrician classifications, including:
+
+- Apprentice
+- Residential Journeyman / Residential Master
+- Journeyman / Master
+
+This book targets **Journeyman**. Typical requirements (verify current DOPL pages before you apply):
+
+- Apprenticeship education **or** extended experience hours
+- Documented supervised experience
+- Pass the **Journeyman written** exam (combined theory + code)
+- Pass the **Utah Electrician Practical** exam
+- Submit the license application and fees
+
+As of **August 1, 2025**, Journeyman candidates take **one combined written exam** (not separate Theory and Code exams). Passing score **75%**, **100 questions**, **240 minutes**.
+
+Master electricians take a **Law and Rules** focused exam structure under the new system; if you later pursue Master, expect heavier Utah statute/rule and safety content (including NFPA 70E themes on that outline).
+
+## Laws and Rules You Should Be Able to Find
+
+The Journeyman written exam includes roughly **four** state law/rule questions — not many, but enough to matter if you are near the cut score. Allowed references typically include:
+
+- **Utah Construction Trades Licensing Act** — Title 58, Chapter 55
+- **Utah Electricians Licensing Act Rule** — R156-55b
+- **DOPL Licensing Act** — Title 58, Chapter 1
+- **General DOPL Rule** — R156-1
+
+Practice navigating PDFs or printed copies for:
+
+- License classifications and scope of work (what a residential license may / may not do)
+- Supervision ratios and apprentice rules
+- Unlawful conduct / unprofessional conduct
+- Renewal, continuing education themes (even if CE is post-license)
+- Exemptions (what work might not require a license — read carefully; exemptions are narrow)
+
+Do not memorize statute numbers blindly. Learn the **table of contents** of R156-55b and Chapter 55 so you can find "definitions," "license classifications," and "conduct" under time pressure.
+
+### Professional habits the law encodes
+
+Utah expects licensed electricians to:
+
+- Work within classification
+- Supervise apprentices properly
+- Pull permits / follow building official processes as required locally
+- Avoid misrepresentation of license status
+- Maintain insurance / business licensing where contracting rules require
+
+Exam questions are often "which statement is true" about supervision or scope — answer from the rule text, not shop tradition.
+
+## Written Exam Logistics (Prov)
+
+High-level process (confirm on [provexam.com](https://provexam.com) and the current Candidate Information Bulletin):
+
+1. Register for **UT Electrical** / Journeyman through Prov's scheduler.
+2. Self-certify that you meet eligibility.
+3. Bring required ID; arrive early.
+4. Bring only **permitted references** and tools (calculator policies matter — check the bulletin).
+5. Computer-based test; results for written exams are typically provided at the site.
+
+Permitted vs prohibited items change — the bulletin wins over any study guide.
+
+### Reference strategy on exam day
+
+- **Ugly's** for formulas, bend multipliers, quick tables
+- **NEC** for almost everything else code-related
+- **Utah rules** for the handful of law items
+
+When a calculation question appears, write the formula first, then plug numbers. When a Code question appears, invent a keyword → article number → section. Avoid reading entire articles; use the index.
+
+### Time management
+
+100 questions in 240 minutes is **2.4 minutes each**. Practical plan:
+
+- First pass: answer what you know in under 90 seconds
+- Flag heavy calculation / lookup items
+- Second pass: work flagged items
+- Third pass: educated guesses — never leave blanks if there is no penalty (confirm scoring rules)
+
+## Practical Exam: Utah Electrician (Unlimited / Journeyman Path)
+
+The unlimited **Utah Electrician Practical** generally includes about **six tasks** in roughly **110 minutes** (confirm current bulletin). Tasks historically include:
+
+1. **Torque setting** — identify fastener grade from a chart; set a torque wrench (Prov provides the torque wrench)
+2. **Transformer termination** — land conductors correctly on a Delta–Wye transformer
+3. **Conduit bending** — fit conduit between boxes; **3-point and 4-point** bends; box offsets; workmanship (straight, plumb, level, clearances)
+4. **Motor control (commercial)** — wire from a **ladder diagram**
+5. **3-way and 4-way switch wiring**
+6. **Schematic reading & wiring** (e.g., doorbell-style schematic)
+
+Important practical rules from Prov's bulletin themes:
+
+- Pass each task **once** — you need not retake tasks you already passed
+- You may complete remaining tasks on later days
+- Bring **your own tools** (list in the bulletin): meters, pliers, strippers, bender, EMT, level, etc.
+- Motor control / switching / schematic tasks are wired **de-energized**; examiner inspects, then energizes if safe
+- After you request inspection, **rework is not allowed** for that task
+- Unsafe wiring that would short equipment will not be energized — that task fails
+
+### Practical prep checklist
+
+- Practice 3-way / 4-way until you can wire them without humming
+- Practice reading ladder diagrams and landing starters correctly
+- Practice Delta–Wye landing: high side, low side, X0/neutral, grounding as instructed
+- Practice saddle bends and offsets into boxes with a level and tape
+- Practice torque chart → wrench setting until boring
+- Pack tools the night before; dull strippers fail people
+
+## Formula Sheet to Rewrite From Memory
+
+Keep rewriting until automatic:
+
+\[
+E=IR \quad P=EI=I^2R=E^2/R
+\]
+
+\[
+R_T\text{(series)}=R_1+R_2+\cdots
+\]
+
+\[
+R_T\text{(two parallel)}=\frac{R_1 R_2}{R_1+R_2}
+\]
+
+\[
+I_{1\phi}=\frac{P}{E\times PF}\qquad I_{3\phi}=\frac{P}{E\times\sqrt{3}\times PF}
+\]
+
+\[
+VD_{1\phi}=\frac{2KID}{CM}\qquad VD_{3\phi}=\frac{1.732KID}{CM}
+\]
+
+\[
+\%VD=\frac{VD}{E}\times100
+\]
+
+Continuous load factor: **125%**. Motor conductor factor (typical single motor): **125% of table FLC**. EGC table: **250.122**. GEC table: **250.66**.
+
+## Topic-Weighted Study Plan
+
+Use Prov's Journeyman weights as your calendar:
+
+| Priority | Topics | Book chapters |
+| --- | --- | --- |
+| Highest | Grounding & Bonding; Overcurrent; Services/Feeders/Branch | 5–6 |
+| High | Conductors; Raceways; Voltage Drop; Lighting/General Use | 3–4, 7 |
+| Medium | Voltage; Current; Resistance; Power; Motors; Special Occ. | 2–3, 8 |
+| Don't skip | Definitions; State Law | 1, 5, 9 |
+
+### Four-week outline (adjust to your test date)
+
+**Week 1** — Chapters 1–3. Drill Ohm's law, power, series/parallel, voltage drop (20 problems).
+
+**Week 2** — Chapters 4–5. Ampacity process, fill, OCPD continuous loads, service vs feeder vs branch, dwelling GFCI/AFCI lookup drills.
+
+**Week 3** — Chapter 6 heavy + Chapter 7. Bonding diagrams from memory; box fill problems; 3-way/4-way practice physically.
+
+**Week 4** — Chapter 8–9. Motor 430 procedure with Code book; special article keyword drills; Utah rule scavenger hunts; full timed 100-question practice if you can get Prov practice materials; practical tool day.
+
+## Exam-Day Mindset
+
+- Sleep beats cramming after midnight
+- Trust your first careful reading; change answers only when you find a clear mistake
+- For Code questions, look it up — "I think Article 250 says…" is how people drop below 75%
+- For math, estimate magnitude before calculating (is 200 A a sane answer for a toaster?)
+- After the written, schedule practical tasks while the theory is fresh
+
+## Final Practice Set (Mixed)
+
+1. Continuous load 28 A: minimum conductor/OCPD sizing current using 125%?
+2. Single-phase VD: 18 A, 100 ft, 12 AWG Cu (6530 cmil), \(K=12.9\). Volts dropped?
+3. Subpanel feeder missing EGC but has two ground rods at the building. Acceptable?
+4. Motor branch conductors: nameplate 12.4 A, table FLC 16.7 A. Which for conductor sizing?
+5. Where is the main bonding jumper installed on a premises service?
+6. You finish 4-way switching on the practical and ask for inspection; the light fails. May you rework?
+
+### Answers
+
+1. \(28\times1.25=35\) A.
+2. \(VD=(2\times12.9\times18\times100)/6530\approx7.11\) V.
+3. No — rods do not replace the EGC.
+4. Table FLC 16.7 A (×1.25 for conductors, generally).
+5. At service equipment — bonding grounded conductor to the enclosure / grounding bus.
+6. No — once inspection is requested, rework for that task is not allowed per exam procedure.
+
+## Closing
+
+Electricians earn trust by making invisible power behave predictably: right size wire, right protection, continuous fault paths, honest workmanship, and respect for the Code and the law. Utah's exams exist to verify that trust before someone hands you a journeyman card.
+
+Use this book as a map. Use the **2023 NEC**, **Ugly's**, and **Utah rules** as the terrain. Then practice until looking things up and calculating voltage drop feel ordinary.
+
+When they do, you are ready to schedule the test — and to work like the licensed electrician you are becoming.
+
+---
+
+## Pro Test
+
+Sign in against Pro (`https://pro.availabooks.com`). Session is an HttpOnly cookie on the Pro host; books on `*.availabooks.com` (or localhost) send it with credentialed requests.
+
+```auth 
+```
+

@@ -1,0 +1,167 @@
+This chapter covers three of the densest exam areas: **Overcurrent Protection**, **Services, Feeders & Branch Circuits**, and a large share of **Definitions & General Requirements**. If you can size a breaker for a continuous load, tell service from feeder from branch circuit, and navigate Articles **210**, **215**, **220**, **230**, and **240**, you are in strong shape for Utah's written exam.
+
+## Overcurrent: Three Personalities
+
+**Overcurrent** means any current beyond rated ampacity. It shows up as:
+
+1. **Overload** — too much current for too long through the normal path (motor struggling, too many heaters).
+2. **Short circuit** — hot-to-hot or hot-to-neutral low-impedance fault; very high current.
+3. **Ground fault** — hot to ground / EGC / grounded metal; also high current if the path is effective.
+
+Fuses and circuit breakers are **overcurrent protective devices (OCPDs)**. They must protect conductors and equipment per Article 240 and equipment listing rules.
+
+## Device Types
+
+**Circuit breakers** — resettable, often thermal-magnetic: thermal element for overload, magnetic for short circuit.
+
+**Fuses** — one-time (or renewable in older styles); categories include plug fuses and cartridge fuses (Class RK, J, L, etc.) with interrupting ratings and current-limiting behavior.
+
+**GFCI** — ground-fault circuit interrupter: trips on small imbalance between hot and neutral (people protection), not a replacement for overcurrent devices.
+
+**AFCI** — arc-fault circuit interrupter: detects dangerous arcing signatures (fire protection), required in many dwelling areas per Article 210.
+
+**Combination devices / dual-function** — AFCI+GFCI where required.
+
+## Standard Breaker Sizes
+
+Article 240 lists standard ampere ratings (15, 20, 25, 30, 35, 40, 45, 50, …). When conductor ampacity does not match a standard size, **you may round up** to the next standard size under the conditions in 240.4(B) — but **not** for small conductor rules and other exceptions that forbid it. Know when round-up is allowed and when you must stay at or below ampacity.
+
+### Small conductor protection (memorize the idea)
+
+For general lighting/receptacle branch circuits, protective devices for 14, 12, and 10 AWG copper are typically limited to **15 A, 20 A, and 30 A** respectively (with specific Code exceptions for certain loads like motors, air conditioning, etc., that have their own articles).
+
+## Continuous Loads and OCPDs
+
+For continuous loads, branch-circuit OCPDs and conductors are generally sized at **125%** of the continuous load (plus 100% of noncontinuous), unless the assembly is listed for 100% continuous operation.
+
+**Example.** Continuous load 16 A on a branch circuit:
+
+\[
+16 \times 1.25 = 20\ A
+\]
+
+A 20 A breaker and conductors rated at least 20 A (after adjustments) are the usual starting point.
+
+## Protecting Conductors vs Protecting Equipment
+
+Conductors must be protected per their ampacity rules. Some equipment (motors, welders, transformers, air conditioning) allows **branch-circuit OCPDs larger than conductor ampacity** within Article 430 / 440 / etc. limits, because startup current would nuisance-trip a "strict ampacity" breaker. Always check the specific article — motor questions are Chapter 8, but the philosophy starts here.
+
+## Location of Overcurrent Devices
+
+OCPDs must be readily accessible (with defined exceptions). Supplementary protection vs branch protection vs feeder protection vs service protection sit at different points in the system. Service OCPDs have special rules in Article 230; you generally do not put the service disconnect in a bathroom, and working clearances from Article 110 apply.
+
+## Branch Circuits (Article 210)
+
+A **branch circuit** runs from the final OCPD to outlets.
+
+### Ratings
+
+Common branch-circuit ratings: 15, 20, 30, 40, 50 A (and others for specific loads). Receptacle ratings must be compatible with circuit ratings (e.g., 15 A receptacles allowed on 20 A circuits under the usual multioutlet rules; single receptacle on a 20 A circuit must be 20 A rated).
+
+### Dwelling receptacle requirements (high-yield)
+
+Expect questions on:
+
+- **GFCI** protection for bathrooms, garages, outdoors, crawl spaces, kitchens (countertop), laundry, basements, near sinks, etc. — read the current 210.8 list; it expands over Code cycles.
+- **AFCI** protection for many dwelling living areas — read 210.12.
+- Bathroom receptacle on a **20 A** circuit (dwelling), with limits on what else may share it.
+- Kitchen **small-appliance branch circuits**: at least **two 20 A** circuits for countertop receptacles; laundry circuit requirements.
+- Spacing of receptacles in dwellings (12 ft rule along walls, counters, etc.).
+- Outdoor receptacle requirements.
+
+Do not memorize an outdated list from an old study guide — verify against **NEC 2023** as adopted/amended in Utah.
+
+### Multioutlet vs individual branch circuits
+
+Individual branch circuits serve one utilization equipment. Multioutlet circuits serve multiple luminaires/receptacles. Load calculations differ.
+
+## Feeders (Article 215)
+
+**Feeders** supply panelboards or other distribution equipment downstream of the service (or separately derived system) and upstream of final branch OCPDs.
+
+Feeder sizing:
+
+- Calculate load (Article 220)
+- Apply continuous load factors
+- Select conductors and OCPDs
+- Include EGCs sized from supply-side OCPD per 250.122
+- Watch neutral sizing when neutrals carry large nonlinear loads (harmonics) — neutrals may need to be counted/ sized carefully
+
+## Load Calculations (Article 220) — Strategy
+
+Article 220 is a procedure, not a single formula. Exam approach:
+
+1. Identify occupancy (dwelling, optional calculation vs standard, etc.).
+2. General lighting load by floor area (VA/ft² from tables) + small appliance & laundry where required.
+3. Apply demand factors where tables allow.
+4. Add fixed appliances, dryers, ranges (use the range/dryer tables — do not invent).
+5. Heating vs cooling — typically the larger load, not both, when noncoincident.
+6. Convert VA to amperes at system voltage: \(I = VA / E\) (1φ) or \(I = VA / (E\sqrt{3})\) (3φ).
+
+**Example sketch (simplified dwelling idea):** 1500 ft² dwelling × 3 VA/ft² = 4500 VA general lighting, plus two small-appliance circuits (1500 VA each) and laundry (1500 VA), then apply demand factors from the dwelling table to portions of that load, then add range/dryer/heating per tables. Work carefully line by line; arithmetic errors fail as many candidates as concept errors.
+
+## Services (Article 230)
+
+The **service** is the conductors and equipment connecting the utility supply to the premises wiring system.
+
+Key ideas:
+
+- **Service-entrance conductors** — from service point toward service disconnect
+- **Service disconnect** — readily accessible, outside or nearest point of entry rules
+- Number of service disconnects grouping rules (often max six in a group — know the current language)
+- Service conductor ampacity vs calculated load
+- Clearances overhead (above roofs, driveways, yards) — table/lookup questions
+- Working space about equipment (Article 110.26): depth, width, height, dedicated space above
+
+### Service grounding preview
+
+Services require grounding electrode systems and bonding of service equipment — Chapter 6. Many "service" exam questions are actually grounding questions in disguise.
+
+## Panelboards and Availability
+
+Panelboards (Article 408) must have appropriate bus ratings, overcurrent protection, phase identification, and directory clarity. Feed-through / lug kits, breaker listings, and series ratings appear on harder questions. For Journeyman level, focus on: correct breaker type for the panel, unused openings closed, and neutral/ground bar separation rules in subpanels vs service equipment.
+
+### Service equipment vs subpanel bonding
+
+At the **service disconnect**, grounded conductor (neutral) is bonded to the enclosure / grounding electrode system.
+
+In a **downstream subpanel**, neutrals and grounds are typically **isolated**: neutrals on an insulated neutral bar, EGCs on a grounding bar bonded to the can, with a four-wire feeder (two hots, neutral, EGC) on single-phase, or five-wire on three-phase with neutral.
+
+This is one of the most important installation concepts in the trade — and a frequent exam target.
+
+## Article 110 Essentials
+
+Before leaving general requirements, lock in:
+
+- **Examination, identification, installation, use** of equipment listed/labeled
+- **Working clearances** about live parts / equipment
+- **Guarding** of live parts
+- **Interrupting rating** — OCPDs must be able to interrupt available fault current
+- **Temperature** limitations at terminations
+- **Arc-flash** labeling requirements (increasingly common)
+
+Available fault current and AIC ratings matter: a 10 kAIC breaker on a service with 22 kA available is wrong even if the ampere rating matches the load.
+
+## Practice Problems
+
+1. A continuous water heater draws 19 A at 240 V on an individual branch circuit. What minimum standard breaker size do you evaluate first using the 125% rule?
+2. Can you generally protect 12 AWG copper branch-circuit conductors with a 30 A breaker for general receptacle use?
+3. Distinguishing: conductors from a main service panel to a garage subpanel are usually ________; conductors from the garage subpanel breaker to a receptacle are ________.
+4. Why are neutrals and grounding bars separated in a subpanel but bonded at service equipment?
+5. A balanced 208 V three-phase feeder load is 40,000 VA. What is the line current?
+6. Name two dwelling areas where GFCI protection is commonly required for receptacles.
+
+### Answers
+
+1. \(19\times1.25 = 23.75\) A → next standard size typically **25 A** if conductors/equipment allow (verify heater nameplate and 422 rules; many heaters use 30 A circuits — read the question's givens).
+2. No — small conductor rules generally limit 12 AWG copper to 20 A for that use.
+3. Feeders; branch circuits.
+4. To keep normal neutral current off equipment grounding paths and enclosures downstream; bonding at the service establishes the system grounding connection once.
+5. \(I = 40000/(208\times1.732) \approx 111\) A.
+6. Examples: bathrooms, outdoors, garages, kitchen countertops — confirm full current list in 210.8.
+
+## Looking Ahead
+
+Chapter 6 is the largest single written topic on Utah's Journeyman exam: **grounding and bonding**. Everything in this chapter about clearing faults only works if the ground-fault path is continuous, low impedance, and correctly sized.
+
+---

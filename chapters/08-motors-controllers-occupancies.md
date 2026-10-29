@@ -1,0 +1,179 @@
+Motors and special equipment punish guesswork. The Utah Journeyman exam dedicates meaningful question counts to **Motors & Controllers** and **Special Occupancies & Equipment**. This chapter teaches the Article **430** method and surveys the special articles you should be able to navigate under time pressure.
+
+## Motor Nameplates and Why Tables Win
+
+A motor nameplate may show:
+
+- Horsepower (hp)
+- Voltage
+- Full-load amperes (FLA) — the motor's measured/rated current
+- Service factor (SF)
+- RPM, phase, frequency
+- Locked-rotor code letter (starting kVA)
+- Insulation class, enclosure type
+
+For **conductor and branch-circuit sizing**, Article 430 generally requires you to use the NEC **full-load current tables** (based on hp and voltage), **not** the nameplate FLA — except where the Code specifically says to use nameplate (for example, separate overload sizing often uses nameplate).
+
+That single rule prevents a huge class of exam mistakes.
+
+## Article 430 Roadmap
+
+Think in layers of protection and wiring:
+
+1. **Motor branch-circuit conductors** — sized to percentage of table FLC (commonly **125%** of FLC for continuous-duty single motor).
+2. **Branch-circuit short-circuit and ground-fault protection** — often permitted much larger than conductor ampacity (percentages from tables based on motor type and device type) so starting current does not trip.
+3. **Overload protection** — sized from **nameplate** current (with service factor rules) to protect the motor windings from prolonged overload.
+4. **Controllers and disconnects** — horsepower rated, voltage rated, within sight rules.
+5. **Feeder supplying several motors** — special calculation: 125% of highest FLC + sum of others, etc.
+
+Keep the percentages tables in Article 430 tabbed. You will look up more than you memorize.
+
+### Worked single-motor sketch
+
+Suppose a 5 hp, 230 V, single-phase motor. (Use actual table values from your NEC — numbers below are procedural, not a substitute for the table.)
+
+1. Look up FLC in the single-phase table.
+2. Conductors ≥ 1.25 × FLC → choose ampacity / wire size.
+3. Find maximum branch-circuit breaker/fuse percentage from the short-circuit/ground-fault protection table for that motor type × FLC → select device (may round per rules).
+4. Overloads from nameplate FLA × percentage based on SF / temperature rise rules.
+5. Confirm controller and disconnect HP ratings.
+
+## Starting Current and Locked Rotor
+
+Motors draw several times FLC at start. That is why short-circuit protective devices can be larger than overload devices. Locked-rotor code letters estimate starting kVA; design engineers use them for voltage flicker — journeyman questions focus more on Article 430 percentages.
+
+## Controllers, Starters, and Pilot Devices
+
+A **controller** starts/stops the motor and may provide overload relays. Types:
+
+- Manual starters
+- Magnetic starters with contactors + overload block
+- VFDs (variable frequency drives) — follow manufacturer listing and Article 430 / 440 interactions
+- Soft starters
+
+**Ladder diagrams** show control circuits: stop buttons in series (NC), start buttons in parallel with seal-in contacts (NO), overload contacts interrupting the coil circuit. Utah's **practical exam** includes commercial **motor control wiring from a ladder diagram**. Skills:
+
+- Coil voltage vs power voltage may differ
+- Overloads open the control circuit
+- Interlocks prevent dangerous simultaneous actions (forward/reverse)
+- Never energize until inspected safe (exam procedure)
+
+### Disconnects
+
+Motors need a disconnecting means within sight of the motor / controller per Article 430 Part IX rules (with exceptions). Horsepower rated switches, breaker-as-disconnect, and cord-and-plug limited allowances appear in questions.
+
+## Several Motors on One Feeder
+
+Typical feeder conductor sizing idea:
+
+\[
+\text{Feeder ampacity} \ge 125\% \times \text{(largest motor FLC)} + \sum \text{(other motor FLCs)} + \text{other loads}
+\]
+
+Feeder short-circuit protection has its own maximum percentage rules. Work these with the Code open; do not invent multipliers.
+
+## Air Conditioning and Refrigeration (Article 440)
+
+Hermetic refrigerant motor-compressors use Article **440**, which looks like 430 but is not identical. Nameplate branch-circuit selection current and maximum protective device ratings on the nameplate often govern. When a question says air conditioner / heat pump, check whether 440 applies before using 430 tables.
+
+## Transformers (Article 450) — Special Equipment Crossover
+
+Transformer overcurrent protection percentages depend on primary-only vs primary-and-secondary protection and voltage. Supervised locations, primary ≤ 9 A rules, and secondary conductor protection show up on exams. Combine with Chapter 3 transformer ratios and Chapter 6 SDS grounding.
+
+## Special Occupancies — How to Study Them
+
+"Special occupancies" means the environment changes the rules: more sealing, different wiring methods, stricter devices. You cannot memorize every fine print. You **can** learn which article owns the problem and what hazard drives it.
+
+| Topic | Article (typical) | Hazard / theme |
+| --- | --- | --- |
+| Hazardous (classified) locations | 500–516 | Explosion — ignition of gases/dusts |
+| Health care facilities | 517 | Patient safety, isolated power, essential systems |
+| Places of assembly | 518 | Crowds / egress |
+| Theaters / studios | 520–530 | Temporary gear, stage pockets |
+| Carnivals / attractions | 525 | Temporary outdoor |
+| Agricultural buildings | 547 | Dust, moisture, equipotential planes |
+| Mobile homes / RVs | 550–552 | Chassisable units |
+| Marinas | 555 | Water, corrosion, shore power |
+| Temporary installations | 590 | Construction power |
+| Emergency systems | 700 | Life safety power |
+| Legally required standby | 701 | |
+| Optional standby | 702 | |
+| Fire pumps | 695 | Reliability of pump power |
+| Swimming pools / spas | 680 | Shock in water — equipotential bonding, GFCI |
+| Solar PV | 690 | DC, rapid shutdown, grounding |
+| Energy storage | 706 | Batteries |
+| EV charging | 625 | Continuous loads, disconnects |
+
+For Journeyman, prioritize **680**, **517** basics, **500** classification vocabulary, **700** vs **702**, and **690** awareness — and always go to the article when a keyword appears.
+
+### Hazardous location vocabulary
+
+- **Class I** — flammable gases/vapors
+- **Class II** — combustible dust
+- **Class III** — fibers/flyings
+- **Division 1** — hazard present in normal operation
+- **Division 2** — hazard abnormal / less frequent
+- Zone system exists as an alternate classification scheme
+
+Wiring methods: sealed conduit entries, explosionproof equipment where required, specific fittings. Questions often ask whether ordinary NM cable or a standard snap switch is permitted (usually not) in a Class I, Div 1 location.
+
+### Pools (Article 680) — high frequency in residential exams too
+
+Themes:
+
+- Equipotential bonding grid / bonding of metal parts
+- GFCI requirements for pool equipment and nearby receptacles
+- Overhead conductor clearances near pools
+- Underwater luminaires: low-voltage vs line-voltage rules
+- Maintenance disconnects for motors
+
+Even unlimited Journeyman candidates see pool questions under special equipment.
+
+### Health care (Article 517) — awareness level
+
+Patient care spaces require redundant grounding paths / copper equipment grounding conductors of certain sizes, hospital-grade receptacles in patient care areas, and isolated power systems in wet procedure locations / anesthetizing locations as applicable. Essential electrical systems have Life Safety, Critical, and Equipment branches. Know the vocabulary; look up details.
+
+## Special Equipment Odds and Ends
+
+- **Signs** (600): branch circuits, disconnects, LED outline lighting
+- **Elevators** (620): dedicated feeders, disconnects with unique rules
+- **Industrial machinery** (670): nameplate full-load and max OCPD
+- **IT equipment** (645): under raised floors, supply disconnects
+- **Pipe organs / audio** — rare, but indexed
+
+## Practical Exam Tie-In: Motor Control
+
+When wiring from a ladder diagram on the practical:
+
+1. Identify control voltage source and protect it.
+2. Wire stop circuit so any stop opens the coil.
+3. Wire start with seal-in around the start button.
+4. Include overload contact in series with the coil.
+5. Land power poles of the contactor to the motor correctly (and ground the motor).
+6. Request inspection before energization.
+
+Wrong motor rotation is usually a swap of two phases on three-phase — fix only if the exam protocol allows rework (often it does not after inspection request).
+
+## Practice Problems
+
+1. For branch-circuit conductor sizing on a continuous-duty motor, do you start from nameplate FLA or NEC table FLC?
+2. Why can a motor branch-circuit breaker be rated much higher than the conductor ampacity?
+3. What device is intended to protect the motor from prolonged mild overload: the branch breaker or the overload relay?
+4. A feeder supplies three motors. Conceptually, how do you combine their FLCs for feeder conductor ampacity?
+5. Class II, Division 1 refers to what kind of hazard present under normal conditions?
+6. Name two Article 680 concerns around permanently installed swimming pools.
+
+### Answers
+
+1. NEC table FLC (generally).
+2. To ride through high starting (locked-rotor) current without nuisance tripping; overloads handle running overload protection.
+3. Overload relay / overload protection.
+4. 125% of the largest motor FLC plus the sum of the other motors' FLCs (plus other loads as applicable).
+5. Combustible dust.
+6. Equipotential bonding of metal parts; GFCI protection; clearances; underwater light rules — any two.
+
+## Looking Ahead
+
+Chapter 9 finishes the book with **Utah laws and rules**, the **practical exam** toolkit, and a study plan keyed to Prov's topic weights so you can convert this reading into a passing score.
+
+---

@@ -1,0 +1,172 @@
+**Grounding & Bonding** is the heaviest single topic on Utah's Journeyman written exam — about **10 questions**. It is also where apprentices most often mix up words that sound alike. This chapter slows down on purpose.
+
+You will live in **Article 250**, with definitions from **Article 100** and equipment rules scattered elsewhere. Keep your NEC open while you study.
+
+## The Three Jobs People Confuse
+
+### 1. System grounding
+
+Connecting a current-carrying conductor (usually the **neutral**) to earth through a grounding electrode system. Purpose:
+
+- Stabilize voltage to earth during normal operation
+- Limit overvoltages from lightning / line surges / unintentional contact with higher voltage lines
+- Provide a reference so that a hot-to-earth fault becomes a detectable overcurrent event (together with bonding)
+
+### 2. Equipment grounding
+
+Providing a low-impedance path from exposed metal parts back to the source so that **fault current** can flow enough to trip an OCPD quickly. The **equipment grounding conductor (EGC)** does this job. Earth itself is **not** a reliable fault-clearing path — dirt is not a conductor you trust for clearing a breaker.
+
+### 3. Bonding
+
+**Electrically connecting** metal parts so they are continuous. Bonding jumpers make enclosures, raceways, and piping participate in the fault path or equalize potential. Bonding is about continuity; grounding electrode connections are about earth reference — related, not identical.
+
+## Critical Definitions (Learn Precisely)
+
+| Term | Meaning |
+| --- | --- |
+| Grounded conductor | Circuit conductor intentionally grounded (often neutral) |
+| Grounding electrode | Object that establishes connection to earth (rod, pipe, plate, concrete-encased, ground ring, metal water pipe, etc.) |
+| Grounding electrode conductor (GEC) | Connects the grounded system / equipment to the grounding electrode |
+| Equipment grounding conductor (EGC) | Bonds equipment/enclosures to the system grounded conductor / source for fault clearing |
+| Main bonding jumper | Connects grounded conductor to service enclosure / grounding bus at service |
+| System bonding jumper | Similar role for separately derived systems |
+| Supply-side bonding jumper | Bonding on the supply side of the service disconnect / SDS disconnect |
+
+If a question says "grounded conductor," it is talking about the **neutral** (in typical AC systems), not the green wire.
+
+## Why Fault Clearing Needs Metal Continuity
+
+Imagine a hot conductor contacts a metal box. For a breaker to trip, fault current must return to the source. The intended return is the **EGC** (or metallic raceway acting as EGC) back to the service neutral-ground bond, then to the source.
+
+If the EGC is missing or open:
+
+- The box may remain energized
+- Fault current may be too low to trip quickly (especially if someone is relying on earth alone)
+- Shock hazard remains until something else fails
+
+**Effective ground-fault current path** is the phrase to remember: continuous, permanent, low impedance, adequately sized, and capable of carrying fault current safely.
+
+## Service Grounding and Bonding
+
+At the **service**:
+
+1. The grounded conductor is brought to the service disconnect enclosure.
+2. A **main bonding jumper** bonds the grounded conductor to the metal enclosure / grounding terminal bar.
+3. A **GEC** lands on the grounding electrode system.
+4. EGCs and metallic raceways bond to the same grounding terminal system so faults return to the bonded neutral.
+
+You normally **bond neutral to ground only once** on solidly grounded systems — at the service (or at a separately derived system), not again in subpanels.
+
+## Subpanels and Separately Derived Systems
+
+### Subpanel (downstream of service)
+
+Use a **4-wire** feeder on 120/240 V single-phase (two hots, neutral, EGC):
+
+- Neutral bar **isolated** from the can
+- Grounding bar bonded to the can
+- Neutral and ground **not** bonded together in the subpanel
+
+### Separately derived system (e.g., transformer)
+
+Bond the secondary grounded conductor to the enclosure with a **system bonding jumper**, connect to a grounding electrode per 250.30, and run EGCs on the secondary side correctly. Utah's practical exam transformer termination task is the hands-on cousin of this theory.
+
+## Grounding Electrodes and the "System"
+
+Article 250 requires a grounding electrode system. Common electrodes:
+
+- Metal underground water pipe (with supplemental electrode rules — water pipe alone is not enough in modern Code)
+- Concrete-encased electrode (Ufer) — often excellent when present
+- Ground ring
+- Rod, pipe, plate electrodes
+- Listed electrodes
+- Other local metal underground systems as described in the Code
+
+### Rod electrodes
+
+If using ground rods, resistance goals and the "two rod" practice appear in Code language: if a single rod does not meet the 25-ohm condition, an additional electrode is required — and in practice many installations drive two rods because measuring 25 ohms is uncommon on residential jobs. Know what the Code actually requires rather than jobsite folklore alone.
+
+### GEC sizing
+
+GEC size is based on the size of the **service entrance conductors** (Table 250.66), with notes for taps, multiple electrodes, and bonding jumpers. You do **not** size the GEC from the load calculation ampacity directly — you size from the table based on ungrounded service conductor size.
+
+### EGC sizing
+
+Equipment grounding conductors are generally sized from the **rating of the OCPD ahead of the circuit** using Table **250.122**, not from Table 250.66. If you upsize ungrounded conductors for voltage drop, you may need to proportionally upsize the EGC — a classic exam trap.
+
+## Bonding Metal Water Piping and Other Systems
+
+Metal water piping and other metal piping systems may require bonding to the electrical system so they cannot remain at a different potential during a fault. Bonding jumpers for piping use sizing rules tied to service conductors / tables in 250. Bonding around water meters and insulating sections matters so the path remains continuous.
+
+Gas piping bonding rules have been clarified over recent Code cycles — read the current 250 requirements rather than assuming old practices.
+
+## Parallel Paths and Objectionable Current
+
+Normal neutral current should not flow on EGCs, cable trays, or water pipes. Objectionable current on grounding paths is why we isolate neutrals in subpanels and avoid multiple neutral-ground bonds. If you feel tingling on a pipe, suspect a wiring error creating parallel neutral paths.
+
+## Isolated Ground Receptacles (Concept)
+
+Some sensitive equipment uses isolated ground receptacles with an insulated EGC run to an isolated ground bus. These are easy to misinstall. Exam: know they still require proper grounding/bonding — "isolated" does not mean ungrounded.
+
+## Temporary Installations and Jobsite Grounding
+
+Construction sites follow Article 590 and OSHA habits: GFCI protection for temporary wiring, proper generator grounding/bonding schemes depending on whether the generator is separately derived, and Assured Equipment Grounding Conductor programs on larger sites.
+
+## GFCI vs Grounding
+
+GFCI can protect people even when an EGC is compromised in some scenarios, but **GFCI is not a substitute** for required equipment grounding. Do not answer exam questions as if GFCI makes grounding optional.
+
+## High-Yield Article 250 Navigation Tips
+
+When a practice question appears, ask:
+
+1. Are they asking about **GEC**, **EGC**, or **bonding jumper**?
+2. Is this **service**, **SDS**, or **feeder/branch** equipment?
+3. Which **table** — 250.66 or 250.122?
+4. Is someone trying to use **earth** as the fault path? (Wrong.)
+5. Is a **second neutral-ground bond** being proposed downstream? (Usually wrong.)
+
+Tab these in your Code book (if tabs are allowed per Prov rules for your sitting):
+
+- 250.4 — general requirements / performance
+- 250.24 — service grounding/bonding
+- 250.30 — separately derived systems
+- 250.52 / 250.53 — electrodes
+- 250.66 — GEC sizing
+- 250.102 — bonding jumpers
+- 250.118 — what may serve as EGC
+- 250.122 — EGC sizing
+
+## Worked Mini-Problems
+
+**1. EGC sizing.** A feeder is protected by a 200 A breaker. What table do you use for the copper EGC size? → **250.122**. Look up 200 A row (commonly 6 AWG Cu — verify in your book).
+
+**2. Voltage-drop upsize.** Same feeder uses 3/0 Cu for ampacity but you upsize to 250 kcmil for voltage drop. What happens to the EGC? → Upsize EGC proportionally per 250.122(B).
+
+**3. Subpanel.** A garage subpanel has the neutral bar bonded to the enclosure with the green screw installed, and a 3-wire feeder (no EGC). Name two violations. → Neutral-ground bond in subpanel; missing EGC / improper feeder.
+
+**4. Water pipe electrode.** A metal underground water pipe is present. Are you done with electrodes? → Usually no — Code requires a supplemental electrode with water pipe electrodes.
+
+## Practice Problems
+
+1. True or false: Driving a ground rod at a subpanel allows you to omit the EGC in the feeder if the rod resistance is low.
+2. Which conductor normally carries current during everyday operation: grounded conductor or EGC?
+3. Main bonding jumper location: service equipment or subpanel?
+4. Table for sizing GEC to a ground rod system vs table for sizing conduit EGC for a branch circuit?
+5. Why is earth a poor equipment grounding means for clearing breakers?
+6. On a 480 V Delta–Wye transformer SDS, where do you establish the secondary system bonding jumper: primary or secondary side?
+
+### Answers
+
+1. False — earth cannot replace the EGC fault path.
+2. Grounded conductor (neutral) carries normal unbalanced/load current; EGC should not (except during faults).
+3. Service equipment (for the premises service).
+4. GEC: 250.66 (with rod special maximums/notes); branch EGC: 250.122.
+5. Soil resistance is high and variable; fault current may not rise enough to trip an OCPD quickly.
+6. Secondary side (separately derived system bonding/grounding rules in 250.30).
+
+## Looking Ahead
+
+With fault paths understood, Chapter 7 turns to what you mount on the wall: **boxes**, device fill, **lighting**, receptacles, and general-use equipment rules that fill another large block of exam questions.
+
+---

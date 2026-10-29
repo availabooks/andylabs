@@ -1,0 +1,184 @@
+Theory tells you how much current a load wants. This chapter is about choosing **wire and raceway** that can carry that current safely — and looking up the NEC rules Utah's exam expects you to navigate.
+
+On the Journeyman written exam, **Conductors & Cables** and **Raceways & Enclosures** are each significant question blocks. Treat this chapter as a field guide to Articles **300**, **310**, **312**, **314** (preview), and the raceway articles in Chapter 3.
+
+## Conductor Materials and Stranding
+
+**Copper** is the default for most branch-circuit work: lower resistance, smaller size for a given ampacity, reliable terminations.
+
+**Aluminum** and copper-clad aluminum appear on feeders and services. Aluminum needs:
+
+- Correct connector listing (Cu/Al)
+- Proper oxide treatment / inhibitor where required by instructions
+- Correct torque
+- Awareness that aluminum needs larger size than copper for similar ampacity
+
+**Solid vs stranded:** Solid is common in smaller branch-circuit sizes; stranded is more flexible and required/preferred as sizes grow. Flexible cords use fine stranding — and cords are **not** a substitute for permanent building wire.
+
+## Insulation Types You Must Recognize
+
+Insulation type letters encode temperature rating and environment. Examples (verify exact listings in NEC Table 310.4(A) / your edition's insulation table):
+
+| Type (examples) | Typical idea |
+| --- | --- |
+| TW | 60°C, wet or dry (limited modern use) |
+| THW / THWN | Often 75°C wet ratings depending on type |
+| THHN / THWN-2 | Common building wire; THHN dry 90°C, dual-rated wet when marked THWN-2 |
+| XHHW / XHHW-2 | Cross-linked, common on feeders |
+| USE / RHW | Underground / wet location styles |
+
+**Critical exam habit:** Termination temperature, not the 90°C column alone, often limits ampacity. Many breakers and lugs are rated **60°C or 75°C**. You may install 90°C-insulated wire (THHN) but still select ampacity from the **75°C column** when terminations require it (with the usual Code conditions).
+
+## AWG and kcmil
+
+American Wire Gauge: **larger AWG number = smaller wire**. 14 AWG is smaller than 10 AWG. After 4/0 AWG, sizes are in **kcmil** (thousands of circular mils): 250, 350, 500, etc.
+
+Memorize approximate copper ampacities only as a sanity check — always confirm with Table **310.16** (or the numbering in your 2023 NEC) under the correct temperature column and conditions of use.
+
+Common copper branch-circuit starting points many electricians know (75°C column, before adjustments — verify in the Code book):
+
+- 14 AWG → 15 A overcurrent typical maximum for most general circuits
+- 12 AWG → 20 A
+- 10 AWG → 30 A
+
+Small conductors have special rules: 14, 12, and 10 AWG copper are limited in overcurrent protection for general use even when ampacity tables show more under some conditions.
+
+## Ampacity Selection Process
+
+A reliable exam sequence:
+
+1. Determine load current (continuous → 125%, noncontinuous as calculated, apply Article 220 demand where required).
+2. Choose conductor material and insulation.
+3. Find base ampacity in the ampacity table for the temperature rating **allowed by terminations and equipment**.
+4. Apply **adjustment** factors for more than three current-carrying conductors in a raceway/cable.
+5. Apply **correction** factors for ambient temperature other than the table basis (usually 30°C).
+6. Ensure the resulting ampacity ≥ required load current.
+7. Size overcurrent protection per Article 240 (next chapter), including round-up rules and continuous-load rules.
+8. Check voltage drop (Chapter 3) — may force a larger size even when ampacity was fine.
+
+### Current-carrying count reminders
+
+Typically counted as current-carrying:
+
+- Ungrounded conductors
+- Neutral that carries only unbalanced current in a balanced multiwire circuit may have exceptions — read 310 carefully for when neutrals count
+- EGC generally does **not** count as current-carrying for adjustment
+
+When adjustment applies, ampacity is reduced — sometimes requiring upsizing.
+
+## Cable Types
+
+**NM (nonmetallic-sheathed cable)** — common in dwelling wood-frame work where permitted. Dry locations, follow support and protection rules, not for embedding in concrete in the general case.
+
+**UF** — underground feeder cable, wet location / direct burial where permitted.
+
+**AC / MC** — armored / metal-clad cables. Watch bonding strip requirements and connector types. MC is widely used in commercial work.
+
+**SE / SER / USE** — service-entrance style cables; know where each is permitted (USE generally not as interior branch-circuit substitute without following specific rules).
+
+**Flexible cord (SO, SJO, etc.)** — appliances, pendants, temporary — not permanent substitute for Chapter 3 wiring methods.
+
+Exam questions often ask: *Is this wiring method permitted in this location?* Read the article's "uses permitted / not permitted" lists.
+
+## Raceways: Purpose and Trade-Offs
+
+A **raceway** encloses and protects conductors, provides a path for pulls, and in metallic forms can serve as an equipment grounding path when installed as a complete Code-compliant system.
+
+| Raceway | Notes |
+| --- | --- |
+| EMT | Thin-wall steel, common commercial, threadless fittings |
+| RMC / IMC | Heavy / intermediate metal conduit, physical protection |
+| PVC (Schedule 40/80) | Corrosion, corrosion resistance; expansion fittings; not a grounding means alone |
+| FMC / LFMC | Flexible metal / liquidtight flexible metal |
+| ENT | Electrical nonmetallic tubing ("smurf tube") where permitted |
+| Wireways / auxiliary gutters | Wire management, fill rules differ |
+
+### Conduit fill
+
+You may not stuff unlimited wires into a raceway. NEC **Chapter 9 Tables 1, 4, and 5** (and Informative Annex C for common conductor combinations) control fill.
+
+Typical Table 1 limits:
+
+- 1 conductor: up to 53%
+- 2 conductors: up to 31%
+- Over 2 conductors: up to **40%**
+
+**Example process:** Find conductor cross-sectional area (Table 5), multiply by count, compare to 40% of raceway internal area (Table 4). Or use Annex C when conductors are all the same size/type.
+
+Nipples (≤ 24 inches between boxes) have different fill allowances — a favorite exam detail.
+
+## Bends, Support, and Securing
+
+Each raceway article specifies:
+
+- Maximum degrees of bend between pull points (often **360°** total)
+- Support intervals
+- Securing near boxes/terminations
+- Bushings / fittings for protection of conductor insulation
+
+Utah's **practical exam** includes conduit bending (3-point and 4-point bends, box offsets, fitting between boxes). Written questions may ask theoretical limits; the practical tests craftsmanship — straight, plumb, level, and clearance over obstacles.
+
+## Enclosures and Cabinets
+
+**Cabinets, cutout boxes, and meter sockets** (Article 312) protect devices and terminations. Watch:
+
+- Working clearance in front (Article 110)
+- Cabinets rated for the environment (indoor/outdoor, NEMA type)
+- Wire-bending space at terminals for larger conductors
+- Unused openings closed
+
+**Boxes** (Article 314) get deeper treatment in Chapter 7 for box fill, but remember: every splice and device needs an accessible box (with listed exceptions).
+
+## Environmental and Installation Conditions
+
+Article 300 themes:
+
+- Protect conductors from physical damage
+- Seal raceways where needed against moisture/gas migration
+- Maintain free air / burial depths for underground installations (Tables for cover)
+- Keep conductors of different systems separated where required
+- Identify high-leg, neutrals, IG conductors, etc., with correct colors/markings
+
+### Color identification (typical U.S. practice — confirm Code/local rules)
+
+- Grounded conductor (neutral): white or gray
+- Equipment grounding: green, green with yellow stripe, or bare
+- Ungrounded: any other colors (commonly black, red, blue for 120/208; brown, orange, yellow for 277/480 — shop standards vary)
+- High-leg (delta): orange identification where required
+
+## Direct Burial and Underground
+
+Know that minimum cover depths depend on wiring method and whether GFCI / residential branch circuits allow reduced cover in some rows of the burial table. PVC vs RMC vs cable change the number. When a question gives a location (parking lot, under dwelling, under driveway), go to the underground cover table — do not guess.
+
+## Parallel Conductors
+
+Large ampacities sometimes use conductors in parallel. Rules include:
+
+- Same length, material, size, insulation
+- Same termination method
+- Proper raceway arrangement
+- Minimum size thresholds in the Code
+
+## Practice Problems
+
+1. Why might you use the 75°C ampacity column for THHN copper even though THHN is rated 90°C dry?
+2. You have four current-carrying 12 AWG copper THHN conductors in one EMT. What extra step does ampacity require beyond Table 310.16?
+3. Does an equipment grounding conductor normally count in the "more than three current-carrying conductors" adjustment?
+4. What Chapter 9 fill percentage generally applies when there are more than two conductors in a raceway?
+5. NM cable is proposed for a wet location outdoor feeder. What is the likely Code problem?
+6. A nipple under 24 inches long is filled with many conductors. Why might that still be acceptable when the same fill in a long conduit run would not?
+
+### Answers
+
+1. Terminations on breakers/equipment are often limited to 75°C (or 60°C); conductor ampacity is limited by the lowest applicable rating in the system.
+2. Apply ampacity adjustment factors for more than three current-carrying conductors.
+3. No — EGCs are generally not counted as current-carrying for that adjustment.
+4. 40% (Table 1).
+5. Standard NM is for dry locations; wet location needs a wet-rated method (UF, conduit with wet-rated conductors, etc.).
+6. Short nipples have higher allowable fill (different rule than standard 40% raceway fill).
+
+## Looking Ahead
+
+Conductors only stay safe if overcurrent devices open on faults and overloads. Chapter 5 covers fuses and breakers, then zooms out to **services, feeders, and branch circuits** — how power is arranged from the utility to the last receptacle.
+
+---

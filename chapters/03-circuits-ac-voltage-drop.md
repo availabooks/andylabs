@@ -1,0 +1,299 @@
+Chapter 2 gave you Ohm's law and power. This chapter puts those tools to work on the kinds of circuits electricians actually build — and on **voltage drop**, a dedicated scoring area on Utah's Journeyman exam.
+
+## Series Circuits in the Field
+
+True pure-series power wiring is uncommon for outlets (we parallel loads so each sees full voltage), but series thinking shows up everywhere:
+
+- Voltage drops along a long feeder
+- Multi-wire connections where improper neutrals create series surprises
+- Troubleshoot: an open in a series string kills everything downstream
+
+Rules to keep sharp:
+
+- Current is the same at every point in a series loop.
+- Voltages add to the source.
+- An open anywhere stops all current.
+
+## Parallel Circuits in the Field
+
+Branch-circuit loads are almost always in parallel across the same voltage.
+
+Rules:
+
+- Voltage is (ideally) the same across each branch.
+- Currents add to the total.
+- Opening one branch does not stop the others.
+- Adding more loads **decreases** total resistance and **increases** total current.
+
+**Example.** On a 120 V circuit, three loads draw 2 A, 3 A, and 5 A.
+
+\[
+I_T = 10\ A,\quad R_{eq} = \frac{120}{10} = 12\ \Omega
+\]
+
+## Multiwire Branch Circuits
+
+A common residential/commercial arrangement uses two ungrounded ("hot") conductors with opposite legs / phases and a shared **neutral** (grounded conductor).
+
+On a 120/240 V single-phase system:
+
+- Each hot to neutral is 120 V.
+- Hot to hot is 240 V.
+- Neutral carries the **difference** of the two hot currents when the hots are on opposite legs.
+
+If both hots are on the same leg (miswired), the neutral can carry the **sum** — a serious overload risk. Handle-tied or common-trip breakers, correct phasing, and identifying neutrals matter.
+
+Exam theme: neutrals are current-carrying conductors in normal operation. Do not confuse them with equipment grounding conductors.
+
+## Introduction to AC Waveforms
+
+AC voltage and current vary with time, typically as a sine wave at **60 Hz** in the U.S.
+
+Important values:
+
+- **Peak** — maximum instantaneous value
+- **Peak-to-peak** — from positive peak to negative peak
+- **RMS (root mean square)** — the effective value that produces the same heating in a resistor as a DC value of that magnitude
+
+For a sine wave:
+
+\[
+E_{RMS} = 0.707 \times E_{peak}
+\]
+
+\[
+E_{peak} = 1.414 \times E_{RMS}
+\]
+
+When someone says "120 volts," they almost always mean **120 V RMS**. Meters used for power work display RMS for sine waves (true-RMS meters needed for distorted waveforms).
+
+## Frequency, Period, and Wavelength (Light Touch)
+
+\[
+f = \frac{1}{T}
+\]
+
+At 60 Hz, the period \(T\) is 1/60 second. You rarely calculate this on the electrician exam, but transformers, motors, and capacitive/inductive behavior all assume the system frequency.
+
+## Resistance, Inductance, and Capacitance
+
+Real AC circuits contain more than resistance.
+
+| Property | Symbol | Opposes / stores | Phase note |
+| --- | --- | --- | --- |
+| Resistance | \(R\) | Dissipates energy as heat | V and I in phase |
+| Inductance | \(L\) (henry) | Opposes change in current | Current lags voltage |
+| Capacitance | \(C\) (farad) | Opposes change in voltage | Current leads voltage |
+
+**Inductive reactance:**
+
+\[
+X_L = 2\pi f L
+\]
+
+**Capacitive reactance:**
+
+\[
+X_C = \frac{1}{2\pi f C}
+\]
+
+**Impedance** \(Z\) is the AC equivalent of resistance for Ohm's law:
+
+\[
+E = I Z
+\]
+
+For a series R–L–C type relationship (magnitudes):
+
+\[
+Z = \sqrt{R^2 + (X_L - X_C)^2}
+\]
+
+### Power factor
+
+\[
+PF = \cos\theta = \frac{P}{VA} = \frac{R}{Z}\quad\text{(series RL simple case)}
+\]
+
+- Purely resistive: PF = 1
+- Motors (inductive): PF lagging, often 0.7–0.9 unloaded vs loaded varies
+- Utility and large facilities care about PF; exam questions may ask you to find true power from VA and PF
+
+**Example.** A load draws 10 A at 240 V. Metered true power is 1920 W.
+
+\[
+VA = 240\times10 = 2400,\quad PF = 1920/2400 = 0.8
+\]
+
+## Transformers (Theory You Need)
+
+Transformers change AC voltage using magnetic coupling. Ideal approximate relationships:
+
+\[
+\frac{E_P}{E_S} = \frac{N_P}{N_S} = \frac{I_S}{I_P}
+\]
+
+Power in ≈ power out (ignoring losses):
+
+\[
+E_P I_P \approx E_S I_S
+\]
+
+**Example.** 480 V primary, 120 V secondary, secondary load 10 A. Approximate primary current:
+
+\[
+I_P \approx \frac{120\times10}{480} = 2.5\ A
+\]
+
+Utah's practical exam includes **transformer termination** for unlimited electrician candidates — matching conductors to correct points on a Delta-Wye transformer. Theory here supports that hands-on task: know high/low voltage sides, neutral/X0 where applicable, and that wrong landing points create dangerous voltages.
+
+### Separately derived systems
+
+A transformer with no direct electrical connection between primary and secondary is a classic **separately derived system**. It needs its own grounding/bonding treatment under Article 250 — foreshadowing Chapter 6.
+
+## Voltage Drop: Why It Matters
+
+Voltage drop is the reduction in voltage from source to load caused by conductor resistance (and, more completely, impedance). Excessive drop causes:
+
+- Dim lights
+- Motors that overheat or fail to start
+- Nuisance issues on electronics
+- Customers who blame "bad power" when the feeder is simply undersized or too long
+
+The NEC **informational notes** recommend (not always a mandatory "shall") limiting drop to roughly:
+
+- **3%** on branch circuits or feeders individually in many notes
+- **5%** total (feeder + branch) as a common design target
+
+Exam questions may ask you to **calculate** drop, or to size wire so drop stays under a stated percentage. Read carefully whether the question uses one-way length or round-trip.
+
+## Voltage Drop Formulas
+
+### Single-phase (most common exam form)
+
+\[
+VD = \frac{2 \times K \times I \times D}{CM}
+\]
+
+Where:
+
+- \(VD\) = voltage drop (volts)
+- \(K\) = direct-current resistance constant (copper ≈ 12.9, aluminum ≈ 21.2 in many Ugly's/exam sheets — use the value the problem or your allowed reference specifies)
+- \(I\) = current in amperes
+- \(D\) = one-way distance in feet
+- \(CM\) = circular mil area of the conductor
+- The **2** accounts for the outgoing and return conductors
+
+### Three-phase
+
+\[
+VD = \frac{1.732 \times K \times I \times D}{CM}
+\]
+
+(Uses \(\sqrt{3}\) instead of 2 for balanced three-phase line conductors.)
+
+### Percent voltage drop
+
+\[
+\%VD = \frac{VD}{E_{source}} \times 100
+\]
+
+### Finding required CM for a maximum drop
+
+Rearrange single-phase:
+
+\[
+CM = \frac{2 \times K \times I \times D}{VD_{max}}
+\]
+
+Then choose the next larger standard conductor size from NEC Chapter 9 Table 8 (or Ugly's).
+
+## Worked Voltage Drop Problems
+
+**Problem A.** A 120 V single-phase branch circuit supplies 16 A. One-way length is 90 ft. Conductor is 12 AWG copper (6530 cmil). Use \(K = 12.9\).
+
+\[
+VD = \frac{2 \times 12.9 \times 16 \times 90}{6530} \approx 5.69\ V
+\]
+
+\[
+\%VD = \frac{5.69}{120}\times100 \approx 4.7\%
+\]
+
+That exceeds a 3% branch-circuit design target — you might upsize the wire.
+
+**Problem B.** Same load and length, but 10 AWG copper (10380 cmil):
+
+\[
+VD = \frac{2 \times 12.9 \times 16 \times 90}{10380} \approx 3.58\ V \approx 3.0\%
+\]
+
+**Problem C.** 208 V three-phase feeder, 40 A, 200 ft one-way, 1 AWG copper (83690 cmil), \(K = 12.9\):
+
+\[
+VD = \frac{1.732 \times 12.9 \times 40 \times 200}{83690} \approx 2.14\ V
+\]
+
+\[
+\%VD = \frac{2.14}{208}\times100 \approx 1.0\%
+\]
+
+**Problem D.** What minimum CM is needed for 240 V single-phase, 30 A, 150 ft, max 3% drop, copper \(K=12.9\)?
+
+\[
+VD_{max} = 0.03\times240 = 7.2\ V
+\]
+
+\[
+CM = \frac{2\times12.9\times30\times150}{7.2} = 16125\ \text{cmil}
+\]
+
+6 AWG copper is 26240 cmil; 8 AWG is 16510 cmil — 8 AWG is just enough by this math (always confirm ampacity and termination temperature ratings too; voltage drop never overrides ampacity rules).
+
+## Using Tables Instead of \(K\)
+
+Ugly's and many exam prep sheets also provide **voltage drop tables** or ohms-per-1000-feet methods:
+
+\[
+VD = I \times R \times \frac{2D}{1000}
+\]
+
+for single-phase, where \(R\) is ohms per 1000 ft from the conductor table at the appropriate temperature. Same idea, different packaging. Use whichever form matches the given data.
+
+## Skin Effect and AC Resistance (Awareness)
+
+At larger sizes and AC, effective resistance rises slightly versus DC (skin effect). Precision design may use AC impedance tables. For typical branch-circuit exam problems, the standard \(K\) method is what you will use.
+
+## Troubleshooting With Voltage Drop Thinking
+
+If voltage at a panel is fine but voltage at a load is low:
+
+1. Measure under load (drop appears when current flows).
+2. Check conductor size and length.
+3. Check for loose neutrals/hots (connection resistance adds drop and heat).
+4. Check shared neutrals and overloaded multiwire circuits.
+5. Check for undersized extension cords or temporary wiring.
+
+## Practice Problems
+
+1. Series: 10 Ω and 30 Ω on 120 V. Find current and voltage across the 30 Ω resistor.
+2. Parallel: loads of 4 A and 12 A on 120 V. Find total current and equivalent resistance.
+3. A load is 1800 VA at 120 V, PF 0.75. Find current and true power.
+4. Single-phase VD: 20 A, 120 ft one-way, 10 AWG Cu (10380 cmil), \(K=12.9\), 120 V system. Find volts dropped and %VD.
+5. What CM is required for 3% max drop: 240 V, 50 A, 180 ft, single-phase copper, \(K=12.9\)?
+6. Transformer: 480 V to 240 V, secondary delivers 25 A. Approximate primary current (ignore losses).
+
+### Answers
+
+1. \(R_T=40\) Ω, \(I=3\) A, \(V_{30}=90\) V.
+2. \(I_T=16\) A, \(R_{eq}=7.5\) Ω.
+3. \(I = 1800/120 = 15\) A; \(P = 1800\times0.75 = 1350\) W.
+4. \(VD = (2\times12.9\times20\times120)/10380 \approx 5.96\) V; \(\%VD \approx 5.0\%\).
+5. \(VD_{max}=7.2\) V; \(CM=(2\times12.9\times50\times180)/7.2 = 32250\) cmil → next standard size at least 4 AWG (41740 cmil) after checking ampacity.
+6. \(I_P \approx (240\times25)/480 = 12.5\) A.
+
+## Looking Ahead
+
+You can now quantify how wire size and length steal voltage from a load. Chapter 4 turns to the hardware itself: conductor types, ampacity, cables, raceways, and enclosures — the Code side of getting current from the panel to the load without cooking the insulation.
+
+---

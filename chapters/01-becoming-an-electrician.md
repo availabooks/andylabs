@@ -1,0 +1,333 @@
+---
+_$_import: andy, a-quiz, abby-assignment
+---
+
+Electricity is invisible until it isn't — until a light turns on, a motor starts, or a fault takes a circuit down. An electrician's job is to make that power do useful work safely: size conductors correctly, protect people and equipment from overcurrent, ground and bond systems so faults clear, and follow the National Electrical Code so installations stay predictable for the next person who opens the panel.
+
+This book prepares you for the **Utah Journeyman Electrician** licensing path. It teaches the theory, calculations, and code habits that show up on the written exam, and it introduces the hands-on skills Utah tests on the practical exam. You will still need the official references on exam day — especially the **2023 National Electrical Code (NEC)** and **Ugly's Electrical References** — but by the end of these chapters you should know what to look up, how to calculate, and how to think like a licensed electrician.
+
+## What Utah Expects of You
+
+Utah licenses electricians through the Division of Professional Licensing (DOPL). For a **Journeyman Electrician**, the usual route is:
+
+1. Complete a four-year apprenticeship (at least 576 classroom hours) **or** document the longer experience-only path.
+2. Accumulate the required on-the-job hours under a licensed journeyman or master.
+3. Pass the **Utah Journeyman Electrician written exam** (combined theory and code).
+4. Pass the **Utah Electrician Practical exam**.
+5. Apply to DOPL for the license once exams and experience are verified.
+
+As of August 1, 2025, Journeyman candidates take **one combined written exam** covering theory and code — not separate Theory and Code tests. You need **75%** to pass. You get **240 minutes** for **100 questions**.
+
+### Written exam topic weights
+
+These are the subject areas Prov publishes for the Journeyman exam. Chapters in this book map to them:
+
+| Topic | Questions (approx.) |
+| --- | --- |
+| Grounding & Bonding | 10 |
+| Overcurrent Protection | 9 |
+| Services, Feeders & Branch Circuits | 8 |
+| Conductors & Cables | 7 |
+| Lighting & General Use Equipment | 7 |
+| Raceways & Enclosures | 7 |
+| Voltage Drop | 7 |
+| Current | 6 |
+| Definitions & General Requirements | 6 |
+| Motors & Controllers | 6 |
+| Resistance | 6 |
+| Special Occupancies & Equipment | 6 |
+| Voltage | 6 |
+| Power | 5 |
+| State Laws & Rules | 4 |
+
+Grounding, overcurrent protection, and services/feeders/branch circuits together are nearly a third of the test. Theory topics (voltage, current, resistance, power, voltage drop) are not "extra" — they are how you answer calculation questions under time pressure.
+
+### Allowed references (written exam)
+
+Bring what Prov lists for your exam date. For Journeyman, that typically includes:
+
+- **NFPA 70 — National Electrical Code, 2023 edition**
+- **Ugly's Electrical References, 2023**
+- Utah statutes and rules: Construction Trades Licensing Act (Title 58, Chapter 55), Electricians Licensing Act Rule (R156-55b), DOPL Licensing Act (58-1), and related division rules
+
+Know how to navigate the NEC table of contents and index. Knowing *where* a rule lives is as valuable as memorizing every number.
+
+## How This Book Is Organized
+
+1. **Chapter 1** — Licensing path, safety mindset, and what electricity is
+2. **Chapter 2** — Voltage, current, resistance, Ohm's law, and power
+3. **Chapter 3** — Circuits, AC concepts, and voltage drop
+4. **Chapter 4** — Conductors, cables, raceways, and enclosures
+5. **Chapter 5** — Overcurrent protection, services, feeders, and branch circuits
+6. **Chapter 6** — Grounding and bonding
+7. **Chapter 7** — Boxes, lighting, and general-use equipment
+8. **Chapter 8** — Motors, controllers, and special occupancies
+9. **Chapter 9** — Utah law and rules, practical exam skills, and exam strategy
+
+Read in order if you are new to theory. If you already have field experience, skim Chapters 2–3, then spend extra time on Chapters 5–6 and 9.
+
+## Safety First: Why Code Exists
+
+The NEC is not a how-to manual for every installation method. It is a **minimum safety standard** for the practical safeguarding of persons and property from electrical hazards. Utah adopts the NEC (with state amendments) as part of its construction codes. Passing the exam means showing you can apply those minimums — not invent your own "good enough."
+
+Three hazards drive almost every rule you will study:
+
+- **Shock** — current through the body. Even small currents can disrupt heart rhythm.
+- **Arc flash / arc blast** — energy released when current jumps through air. Heat, light, pressure, and shrapnel.
+- **Fire** — overloaded conductors, loose connections, and arcing faults that ignite surroundings.
+
+Protection strategies you will see again and again:
+
+- Size conductors and terminations for the load and environment.
+- Use overcurrent devices that open before conductors overheat.
+- Provide an effective ground-fault path so breakers and fuses can clear faults quickly.
+- Keep live parts guarded, enclosed, and identified.
+- Work de-energized whenever practical; when you cannot, follow lockout/tagout and safe work practices (NFPA 70E territory — especially relevant for Master-level law/safety questions).
+
+## What Electricity Is (Working Picture)
+
+You do not need a physics degree to pass, but you do need a clear mental model.
+
+**Charge** is a property of matter. Electrons carry negative charge. When electrons are forced to move through a conductor, we call that motion **electric current**.
+
+**Voltage** (electromotive force) is the pressure that pushes charge. Higher voltage can push the same current through more resistance, or push more current through the same resistance.
+
+**Current** is the rate of charge flow, measured in **amperes** (A). One ampere is a large flow for a person — household branch circuits are often 15 A or 20 A, and that is more than enough to kill if it takes a path through the body.
+
+**Resistance** opposes current. Every conductor has some resistance; loads (heaters, lamps, motors) are designed to present useful resistance or impedance so work gets done.
+
+**Power** is the rate of energy use, measured in **watts** (W). On AC systems you will also meet **volt-amperes** (VA) and **power factor** — Chapter 2 and 3 cover those carefully.
+
+Think of a simple DC circuit as:
+
+- A **source** (battery or supply) that provides voltage
+- **Conductors** that form a closed path
+- A **load** that converts electrical energy into heat, light, or motion
+- Optionally a **switch** that opens or closes the path
+- Optionally an **overcurrent device** that opens the path if current goes too high
+
+If the path is open, current stops. If the path is closed and resistance is low (a short), current tries to become enormous — that is why overcurrent protection exists.
+
+## AC Versus DC (First Pass)
+
+**Direct current (DC)** flows in one direction. Batteries and many electronics use DC.
+
+**Alternating current (AC)** reverses direction many times per second. In North America, utility power is typically **60 Hz** — sixty cycles per second. Homes and commercial buildings in Utah are almost entirely AC systems: often **120/240 V** single-phase residential, and **120/208 V** or **277/480 V** three-phase commercial/industrial.
+
+The journeyman exam expects you to:
+
+- Use Ohm's law and power formulas on DC and simple AC resistive circuits
+- Apply voltage-drop formulas to AC branch circuits and feeders
+- Understand single-phase and three-phase relationships for motors and services
+- Apply NEC rules written for AC premises wiring
+
+You will deepen AC ideas in Chapter 3. For now, remember: most "house" calculations use RMS AC values (the effective values printed on equipment), not peak wave values.
+
+## The Language of the Trade
+
+Exam questions often hinge on definitions. Start collecting these carefully; Chapter 5 and 6 will use them constantly.
+
+- **Branch circuit** — conductors between the final overcurrent device and the outlets
+- **Feeder** — conductors between the service equipment (or source of a separately derived system) and the final branch-circuit overcurrent device
+- **Service** — conductors and equipment bringing utility power to the premises wiring system
+- **Overcurrent** — current beyond rated capacity — overload, short circuit, or ground fault
+- **Grounded conductor** — normally current-carrying conductor intentionally grounded (often the neutral)
+- **Equipment grounding conductor (EGC)** — bonding path for fault current, not a normal current path
+- **Grounding electrode conductor (GEC)** — connects the system grounded conductor / equipment to the grounding electrode
+- **Ampacity** — maximum current a conductor can carry continuously under conditions of use without exceeding temperature rating
+
+When a question says "grounded," "grounding," or "bonding," read slowly. Those words are not interchangeable — Chapter 6 exists largely because people confuse them.
+
+## How to Study With This Book
+
+1. **Read for understanding, then calculate.** Theory questions are faster if the formulas are automatic.
+2. **Keep a formula sheet** you write yourself: Ohm's law, power, voltage drop, series/parallel resistance, three-phase power, motor FLC lookup habits.
+3. **Practice looking things up in the NEC.** Tab Articles 100, 110, 210, 215, 220, 230, 240, 250, 300, 310, 314, 430, and Chapter 9 tables if your exam allows tabs per Prov rules.
+4. **Do the practice problems** at the end of each chapter without peeking, then check your method — not just the final number.
+5. **Treat Utah law questions as open-book navigation.** Know which act or rule answers licensing, supervision, and scope-of-work questions.
+
+## Practice: Mindset Check
+
+1. What score and time limit apply to the Utah Journeyman written exam after the August 2025 format change?
+2. Name the two primary references most calculation/code candidates live in on exam day.
+3. Why does a short circuit demand overcurrent protection even if the load itself is small?
+4. In one sentence each, distinguish branch circuit, feeder, and service.
+5. Which written-exam topic currently carries the most questions?
+
+### Answers
+
+1. 75% in 240 minutes on a 100-question combined theory/code exam.
+2. NEC 2023 and Ugly's Electrical References 2023 (plus Utah statutes/rules for law items).
+3. A short creates a very low-resistance path, so current can rise far above conductor ampacity and start a fire or destroy equipment unless a fuse or breaker opens.
+4. Branch circuit: final OCPD to outlets. Feeder: service/source equipment toward the final branch OCPD. Service: utility supply into the premises system.
+5. Grounding & Bonding.
+
+## Looking Ahead
+
+Chapter 2 builds the calculation foundation: voltage, current, resistance, Ohm's law, and power. If those four ideas are solid, voltage drop, conductor sizing judgment, and motor questions become much less intimidating.
+
+Bring curiosity and a calculator you know well. The exam rewards clear thinking under time pressure — and clear thinking starts with the fundamentals.
+
+---
+
+## Demo
+```circuit-lab {height="800" display="none"}
+title: Doorbell Demo Lab
+margin: 40
+passMessage: Pass — Front has its own chime; Rear and Side share the Rear chime.
+hints:
+  demo: >-
+    Demo: press Front for one sound; Rear and Side share the other
+    (as in a typical residential chime). Double-click a wire to bend it;
+    Undo (Ctrl/Cmd+Z) reverses wire edits.
+  lab: >-
+    Lab: wire so Front has its own path and Rear + Side share the Rear chime.
+    Color matches the terminal you click. Undo reverses edits. Then Check to grade.
+
+# Positions: numbers, percents ("42%"), or expressions
+# (margin, left, top, center, right, bottom) with optional +/- offset.
+components:
+  - id: chime
+    type: chime
+    x: margin
+    y: margin
+  - id: transformer
+    type: transformer
+    x: right-190
+    y: margin
+  - id: terminalBlock
+    type: terminal-block
+    x: center-140
+    y: 42%
+  - id: power
+    type: power
+    x: margin
+    y: bottom-128
+  - id: buttonFront
+    type: button
+    label: Front
+    x: center-160
+    y: bottom-118
+  - id: buttonRear
+    type: button
+    label: Rear
+    x: center-48
+    y: bottom-118
+  - id: buttonSide
+    type: button
+    label: Side
+    x: center+64
+    y: bottom-118
+
+simulation:
+  supply:
+    hot: transformer.sec-hot
+    return: transformer.sec-com
+  loads:
+    - id: front
+      requireHot: chime.trans
+      signal: chime.front
+      feedback: { type: sound, profile: dingDong }
+    - id: rear
+      requireHot: chime.trans
+      signal: chime.rear
+      feedback: { type: sound, profile: buzz }
+
+grading:
+  required:
+    - power
+    - transformer
+    - chime
+    - terminalBlock
+    - buttonFront
+    - buttonRear
+    - buttonSide
+  continuity:
+    - from: transformer.sec-hot
+      to: chime.trans
+      fail: "Chime Trans is not powered from the transformer 24V hot."
+  whenClosed:
+    - switch: buttonFront
+      energize: [front]
+    - switch: buttonRear
+      energize: [rear]
+    - switch: buttonSide
+      energize: [rear]
+
+# Demo mode starts with these wires. Lab mode starts empty (student wires it).
+demo:
+  wires:
+    # 120V: power → terminal block → transformer
+    - { from: power.l1, to: terminalBlock.l1, color: blue }
+    - { from: power.n, to: terminalBlock.n, color: gray }
+    - { from: power.g, to: terminalBlock.g, color: green }
+    - { from: terminalBlock.l1, to: transformer.pri-l1, color: blue }
+    - { from: terminalBlock.n, to: transformer.pri-n, color: gray }
+    - { from: terminalBlock.g, to: transformer.pri-g, color: green }
+    # 24V: transformer hot → chime Trans; COM → buttons
+    - { from: transformer.sec-hot, to: chime.trans, color: red }
+    - { from: transformer.sec-com, to: terminalBlock.com, color: gray }
+    - { from: terminalBlock.com, to: buttonFront.com, color: gray }
+    - { from: terminalBlock.com, to: buttonRear.com, color: gray }
+    - { from: terminalBlock.com, to: buttonSide.com, color: gray }
+    # Front own path; Rear + Side share Rear chime
+    - { from: buttonFront.sig, to: terminalBlock.sig-f, color: red }
+    - { from: terminalBlock.sig-f, to: chime.front, color: red }
+    - { from: buttonRear.sig, to: terminalBlock.sig-r, color: red }
+    - { from: buttonSide.sig, to: terminalBlock.sig-s, color: red }
+    - { from: terminalBlock.sig-s, to: terminalBlock.sig-r, color: red }
+    - { from: terminalBlock.sig-r, to: chime.rear, color: red }
+```
+
+
+## Oral assignment
+
+::: {.abby-assignment ref="abby/how-congress-works"}
+:::
+
+## Check Your Understanding
+
+```a-quiz {randomize="true" origin="https://dev.availabooks.com:2732" submit="true" assessment-id="electrician-1"}
+1. As of August 1, 2025, how is the Utah Journeyman Electrician written exam structured?
+a) Separate Theory and Code exams
+*b) One combined exam covering theory and code
+c) A practical exam only
+d) An open-book oral interview
+> Journeyman candidates take one combined written exam covering theory and code — not separate Theory and Code tests.
+
+2. What score do you need to pass the Utah Journeyman written exam?
+a) 60%
+b) 70%
+*c) 75%
+d) 90%
+> You need 75% to pass. You get 240 minutes for 100 questions.
+
+3. Which references are typically allowed on the Utah Journeyman written exam?
+a) Any electrical textbook you bring
+*b) The 2023 NEC, Ugly's 2023, and listed Utah statutes/rules
+c) Only a non-programmable calculator
+d) NFPA 70E alone
+> Bring the 2023 NEC, Ugly's Electrical References 2023, and the listed Utah statutes and rules for your exam date.
+
+4. What is the NEC primarily?
+a) A complete how-to manual for every installation method
+*b) A minimum safety standard for safeguarding persons and property
+c) A Utah-only wage and licensing handbook
+d) A manufacturer catalog of listed products
+> The NEC is a minimum safety standard for the practical safeguarding of persons and property from electrical hazards — not a complete how-to manual.
+
+5. Which three hazards drive almost every electrical safety rule in this chapter?
+*a) Shock, arc flash/blast, and fire
+b) Noise, vibration, and corrosion
+c) Theft, vandalism, and weather
+d) Cost, schedule, and aesthetics
+> Shock, arc flash/arc blast, and fire drive almost every rule you will study.
+
+6. In the working picture from this chapter, what is voltage?
+a) The rate of charge flow measured in amperes
+*b) The pressure that pushes charge through a circuit
+c) Opposition to current in ohms only
+d) The heat produced by a loose connection
+> Voltage (electromotive force) is the pressure that pushes charge through a circuit.
+```
+

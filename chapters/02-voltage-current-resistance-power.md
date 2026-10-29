@@ -1,0 +1,302 @@
+Every calculation on the electrician exam starts here. If you can move confidently between volts, amps, ohms, and watts, you can solve a large share of theory questions without opening the NEC. Code comes later; this chapter is pure electrical sense.
+
+## Voltage: Electrical Pressure
+
+**Voltage** is the difference in electric potential between two points. It is the "pressure" that can push current through a circuit. The unit is the **volt** (V).
+
+Common voltages you will see in Utah work and on the exam:
+
+| System | Typical voltages | Where you see it |
+| --- | --- | --- |
+| Residential single-phase | 120/240 V | Homes, small shops |
+| Commercial three-phase | 120/208 V | Many offices and retail |
+| Industrial three-phase | 277/480 V | Large buildings, plants |
+| Control / signaling | 24 V, 120 V | Controls, doorbells, some lighting controls |
+
+### Series and parallel voltage ideas (preview)
+
+- In a **series** connection of voltage sources of the same polarity, voltages **add**.
+- Across loads in **parallel**, each load sees the **same** voltage (ideally).
+- Across loads in **series**, the source voltage **divides** among the loads in proportion to their resistances.
+
+Exam tip: if a question gives a 240 V source and two equal resistors in series, each resistor drops 120 V.
+
+## Current: Rate of Flow
+
+**Current** is the flow of electric charge. The unit is the **ampere** (A), often shortened to **amp**.
+
+Direction convention: conventional current is said to flow from positive to negative outside the source. Electron flow is the opposite. For almost all exam work, use conventional current and Kirchhoff's laws without worrying about electron direction.
+
+### Continuous load habit
+
+The NEC often treats a load that runs for **3 hours or more** as a **continuous load**. Continuous loads are typically calculated at **125%** for branch-circuit and feeder sizing purposes. That 125% factor shows up constantly on exams — memorizing it early saves time later.
+
+## Resistance: Opposition to Current
+
+**Resistance** opposes current. The unit is the **ohm** (Ω).
+
+Factors that increase conductor resistance:
+
+- Longer length
+- Smaller cross-sectional area (higher AWG number for smaller wire)
+- Higher resistivity material (aluminum higher than copper)
+- Higher temperature (resistance of metal conductors rises with heat)
+
+**Resistivity** and **circular mils** appear in voltage-drop and conductor math. A **circular mil** (cmil) is the area of a circle 1 mil (0.001 inch) in diameter. Conductor areas in Chapter 9 of the NEC are listed in circular mils for larger sizes.
+
+Approximate resistance of copper and aluminum per 1000 feet at a given temperature is tabulated in Ugly's and NEC Chapter 9 Table 8. On the exam, prefer the table over memorizing exotic constants — but know the relationships:
+
+\[
+R = \frac{K \times L}{CM}
+\]
+
+Where:
+
+- \(R\) = resistance in ohms (one-way conductor, depending on how \(L\) is defined — see voltage drop chapter)
+- \(K\) = resistivity constant (often ~12.9 for copper, ~21.2 for aluminum in ohm-cmil/ft at common exam temperatures — confirm with your reference for the exact problem)
+- \(L\) = length in feet
+- \(CM\) = circular mil area
+
+## Ohm's Law
+
+For DC circuits and AC resistive circuits:
+
+\[
+E = I \times R
+\]
+
+Or rearranged:
+
+\[
+I = \frac{E}{R} \qquad R = \frac{E}{I}
+\]
+
+Electricians often use **E** for voltage (electromotive force), **I** for current (intensity), and **R** for resistance.
+
+### Worked examples
+
+**Example 1.** A heating element draws 10 A from 120 V. What is its resistance?
+
+\[
+R = \frac{120}{10} = 12\ \Omega
+\]
+
+**Example 2.** A 24 Ω resistor is connected across 240 V. Find the current.
+
+\[
+I = \frac{240}{24} = 10\ A
+\]
+
+**Example 3.** A circuit with 8 Ω resistance carries 15 A. What voltage is across it?
+
+\[
+E = 15 \times 8 = 120\ V
+\]
+
+### Series resistances
+
+Resistances in series add:
+
+\[
+R_T = R_1 + R_2 + R_3 + \cdots
+\]
+
+Current is the same through each series resistor. Voltage drops divide proportional to resistance.
+
+**Example.** Three resistors — 4 Ω, 6 Ω, and 10 Ω — in series on 120 V.
+
+\[
+R_T = 20\ \Omega,\quad I = \frac{120}{20} = 6\ A
+\]
+
+Drops: \(V_4 = 24\) V, \(V_6 = 36\) V, \(V_{10} = 60\) V. Sum = 120 V.
+
+### Parallel resistances
+
+For two resistors:
+
+\[
+R_T = \frac{R_1 R_2}{R_1 + R_2}
+\]
+
+For equal resistors of value \(R\), \(n\) in parallel:
+
+\[
+R_T = \frac{R}{n}
+\]
+
+For any number of parallels, a reliable method is conductance:
+
+\[
+\frac{1}{R_T} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots
+\]
+
+Voltage across each parallel branch is the same. Currents divide inversely with resistance (more current through the smaller resistance).
+
+**Example.** 6 Ω and 3 Ω in parallel on 120 V.
+
+\[
+R_T = \frac{6\times3}{6+3} = 2\ \Omega,\quad I_T = \frac{120}{2} = 60\ A
+\]
+
+Branch currents: \(I_6 = 20\) A, \(I_3 = 40\) A.
+
+### Combination circuits
+
+Reduce parallel groups to equivalents, then combine series strings, step by step. Exam questions love one parallel pair in series with another resistor.
+
+## Power
+
+**Power** is the rate of energy transfer. Unit: **watt** (W). Larger loads use **kilowatts** (kW).
+
+Core formulas (resistive / DC / unity power factor):
+
+\[
+P = E \times I
+\]
+
+\[
+P = I^2 R
+\]
+
+\[
+P = \frac{E^2}{R}
+\]
+
+**Example.** 120 V circuit draws 12 A into a resistive heater.
+
+\[
+P = 120 \times 12 = 1440\ W = 1.44\ kW
+\]
+
+### Energy and cost (occasional exam flavor)
+
+Energy in watt-hours or kilowatt-hours:
+
+\[
+\text{kWh} = \frac{P_{\text{watts}} \times \text{hours}}{1000}
+\]
+
+If power costs $0.12/kWh, a 1500 W heater running 4 hours costs:
+
+\[
+\frac{1500 \times 4}{1000} \times 0.12 = \$0.72
+\]
+
+## Single-Phase and Three-Phase Power
+
+### Single-phase
+
+\[
+P = E \times I \times PF
+\]
+
+Where **PF** is power factor (1.0 for purely resistive loads). Many exam heater/lighting problems assume PF = 1.
+
+Apparent power in volt-amperes:
+
+\[
+VA = E \times I
+\]
+
+### Three-phase
+
+For balanced three-phase:
+
+\[
+P = E_{L} \times I_{L} \times \sqrt{3} \times PF
+\]
+
+\[
+VA = E_{L} \times I_{L} \times \sqrt{3}
+\]
+
+Where \(E_L\) and \(I_L\) are **line** voltage and **line** current. \(\sqrt{3} \approx 1.732\).
+
+**Example.** A balanced three-phase load draws 20 A per phase on a 208 V system at PF 0.9.
+
+\[
+P = 208 \times 20 \times 1.732 \times 0.9 \approx 6477\ W
+\]
+
+\[
+VA = 208 \times 20 \times 1.732 \approx 7197\ VA
+\]
+
+### Finding current from power (common exam move)
+
+Single-phase:
+
+\[
+I = \frac{P}{E \times PF}
+\]
+
+Three-phase:
+
+\[
+I = \frac{P}{E \times 1.732 \times PF}
+\]
+
+**Example.** 10 kW single-phase resistive load on 240 V:
+
+\[
+I = \frac{10000}{240} = 41.7\ A
+\]
+
+## Horsepower and Motors (Bridge to Chapter 8)
+
+Motors are often rated in **horsepower** (hp). Rough conversion:
+
+\[
+1\ \text{hp} = 746\ W
+\]
+
+That is input mechanical output rating — actual electrical input is higher because motors are not 100% efficient. For exam conductor and OCPD sizing, you usually use **NEC tables for full-load current (FLC)** based on horsepower and voltage, not a homemade watt calculation. Learn the idea now; apply the tables in Chapter 8.
+
+## Heat: Why \(I^2R\) Matters
+
+Power lost as heat in a conductor is \(I^2R\). Doubling current **quadruples** heating in the same resistance. That is why ampacity, terminations, and torque matter. A loose lug raises resistance at the connection; heat concentrates there and can start a fire long before the breaker trips on a modest load.
+
+## Kirchhoff's Laws (Exam-Ready Version)
+
+**Kirchhoff's Current Law (KCL):** The algebraic sum of currents into a node is zero. What goes in must come out.
+
+**Kirchhoff's Voltage Law (KVL):** The algebraic sum of voltages around a closed loop is zero. Source voltages equal the sum of drops.
+
+You may not see those names on the test, but series/parallel problem-solving uses them constantly.
+
+## Quick Reference Card
+
+| Relationship | Formula |
+| --- | --- |
+| Ohm's law | \(E = IR\) |
+| Power | \(P = EI = I^2R = E^2/R\) |
+| Series R | \(R_T = R_1+R_2+\cdots\) |
+| Two parallel R | \(R_T = (R_1 R_2)/(R_1+R_2)\) |
+| 1φ current | \(I = P/(E\cdot PF)\) |
+| 3φ power | \(P = E I \sqrt{3}\, PF\) |
+| 3φ current | \(I = P/(E\sqrt{3}\,PF)\) |
+
+## Practice Problems
+
+1. A 480 Ω resistor is connected to 120 V. Find current and power.
+2. Two 100 Ω resistors are in parallel across 240 V. Find total resistance, total current, and power in each resistor.
+3. A 5 kW, 240 V single-phase heater (PF = 1). Find current. If continuous, what is 125% of that current?
+4. Resistances 2 Ω, 3 Ω, and 6 Ω are in parallel. Find \(R_T\).
+5. A balanced 3-phase load is 30 kW at 480 V, PF 0.85. Find line current.
+6. Copper conductor idea check: if length doubles and all else stays equal, what happens to resistance? To \(I^2R\) heating at the same current?
+
+### Answers
+
+1. \(I = 120/480 = 0.25\) A. \(P = 120\times0.25 = 30\) W (or \(I^2R = 0.0625\times480 = 30\) W).
+2. \(R_T = 50\) Ω. \(I_T = 240/50 = 4.8\) A. Each resistor sees 240 V, so each dissipates \(240^2/100 = 576\) W.
+3. \(I = 5000/240 = 20.83\) A. Continuous 125%: \(26.04\) A.
+4. \(1/R_T = 1/2 + 1/3 + 1/6 = 1\), so \(R_T = 1\) Ω.
+5. \(I = 30000/(480\times1.732\times0.85) \approx 42.4\) A.
+6. Resistance doubles. Heating doubles (same \(I\), double \(R\)).
+
+## Looking Ahead
+
+Chapter 3 applies these tools to real circuits: how series and parallel behave under load, what AC adds beyond pure resistance, and how to calculate **voltage drop** — one of the heavier theory bands on the Utah Journeyman exam.
+
+---

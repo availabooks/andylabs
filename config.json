@@ -1,0 +1,65 @@
+{
+  "blogUrl": "andylabs.availabooks.com",
+  "title": "Andy Labs",
+  "authors": [
+    "Andy Jones",
+    "Elijah Allen"
+  ],
+  "chapterLabel": "Chapter",
+  "description": "Theory, calculations, and code habits for the Utah Journeyman Electrician exams.",
+  "appSlug": "andylabs",
+  "pagesProjectName": "book-andylabs",
+  "cloudflareAccountId": "0bfdb544606ce71a8c67be03fabd48ee",
+  "system": "dev",
+  "versions": {
+    "default": {
+      "chapters": [
+        {
+          "id": "becoming-an-electrician",
+          "title": "Becoming an Electrician in Utah",
+          "filename": "1.html"
+        },
+        {
+          "id": "voltage-current-resistance-power",
+          "title": "Voltage, Current, Resistance, and Power",
+          "filename": "2.html"
+        },
+        {
+          "id": "circuits-ac-voltage-drop",
+          "title": "Circuits, AC Concepts, and Voltage Drop",
+          "filename": "3.html"
+        },
+        {
+          "id": "conductors-cables-raceways",
+          "title": "Conductors, Cables, Raceways, and Enclosures",
+          "filename": "4.html"
+        },
+        {
+          "id": "overcurrent-services-feeders",
+          "title": "Overcurrent Protection, Services, Feeders, and Branch Circuits",
+          "filename": "5.html"
+        },
+        {
+          "id": "grounding-and-bonding",
+          "title": "Grounding and Bonding",
+          "filename": "6.html"
+        },
+        {
+          "id": "boxes-lighting-equipment",
+          "title": "Boxes, Lighting, and General-Use Equipment",
+          "filename": "7.html"
+        },
+        {
+          "id": "motors-controllers-occupancies",
+          "title": "Motors, Controllers, and Special Occupancies",
+          "filename": "8.html"
+        },
+        {
+          "id": "utah-law-practical-exam",
+          "title": "Utah Law, the Practical Exam, and Your Study Plan",
+          "filename": "9.html"
+        }
+      ]
+    }
+  }
+}

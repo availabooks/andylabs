@@ -1,0 +1,151 @@
+This chapter covers the "finish" of an electrical system: boxes and device wiring, luminaires, receptacles, appliances, and related general-use equipment. On the Utah Journeyman exam, **Lighting & General Use Equipment** is a substantial block, and box-fill questions often hide inside raceway/enclosure or general-requirements items.
+
+Primary Code homes: **Article 314** (boxes), **404** (switches), **406** (receptacles), **410** (luminaires), **422** (appliances), **424** (fixed electric space-heating), plus dwelling requirements you already met in Article **210**.
+
+## Why Boxes Exist
+
+Boxes:
+
+- Protect splices and terminations
+- Support devices and luminaires (within listing/weight limits)
+- Provide grounding continuity for metal systems
+- Keep combustible material away from arcing device contacts
+
+Every splice must be in a covered box or listed enclosure (with limited exceptions such as certain cable manufacturing splices). Boxes must remain **accessible** — not buried in walls or ceilings without access.
+
+## Box Fill Calculations (High-Yield Skill)
+
+Article 314 gives a volume allowance method. The idea:
+
+1. Count each **conductor** that enters and terminates/splices toward fill (with rules for passes-through, EGCs, etc.).
+2. Count **device** yokes (switches/receptacles) as a conductor volume based on the largest conductor connected to the device.
+3. Count **internal cable clamps** (if present) as a volume allowance.
+4. Count **EGCs** specially — all EGCs together typically count as a single allowance based on the largest EGC (verify current wording).
+5. Compare total required volume to the box's marked cubic-inch capacity (or standard table volumes for metal boxes).
+
+### Typical counting habits (confirm exact 2023 language while practicing)
+
+- A conductor that originates outside, enters, and terminates in the box counts once.
+- A conductor that passes through unbroken may count differently than one that is spliced — read carefully.
+- Pigtails staying inside the box usually do **not** add extra fill.
+- Equipment grounding conductors: grouped count rules.
+- Each yoke-mounted device: fill allowance equal to **double** the volume of the largest conductor connected to that device (common rule — verify).
+
+**Example sketch.** A metal device box with four 12 AWG conductors (two cables), one 12 AWG EGC group, one internal clamp, and one duplex receptacle:
+
+- Conductors: 4 × (volume for 12 AWG)
+- EGCs: 1 × (volume for 12 AWG)
+- Clamp: 1 × (volume for 12 AWG)
+- Device: 2 × (volume for 12 AWG)
+
+Add cubic inches; ensure box ≥ total. Use the volume table for 12 AWG allowances in 314.
+
+Practice until this is mechanical — it is slow the first ten times and fast afterward.
+
+## Box Types and Supports
+
+- **Device boxes** for switches/receptacles
+- **Octagon / round** boxes for luminaires
+- **Square boxes** with extension rings for more volume
+- **Masonry boxes**, floor boxes, weatherproof boxes
+- **Old work** vs new work mounting
+
+Luminaires above a certain weight need boxes listed for support or independent support. Ceiling fans require boxes listed for fan support — a frequent exam and inspection item.
+
+## Switches (Article 404)
+
+### Single-pole, three-way, four-way
+
+- **Single-pole:** open/close one hot.
+- **Three-way:** two locations control one load; travelers between switches.
+- **Four-way:** inserted between three-ways for three+ locations.
+
+Utah's **practical exam** requires wiring **3-way and 4-way** switch loops correctly **before** energization. On paper tests, expect schematic interpretation: identify travelers, common terminals, and switched-hot to the luminaire.
+
+Switch loops in older NM used a white as hot — must be reidentified. Neutrals are required in many switch boxes now for modern controls (electronic, occupancy, smart switches) per current Code — know that many switch locations need a grounded conductor available.
+
+### Switch ratings and neutrals
+
+Switches must be rated for the voltage and load. Knife switches, dimmers (only on compatible luminaires), and motor-rated switches appear occasionally.
+
+## Receptacles (Article 406)
+
+- Correct orientation is not always Code-mandated, but grounding pin position and weather-resistant / tamper-resistant requirements are.
+- **Tamper-resistant (TR)** receptacles in dwellings (and some other occupancies).
+- **Weather-resistant (WR)** outdoors.
+- **GFCI** and **AFCI** as required by 210 — devices may provide protection or upstream breakers may.
+- Isolated ground receptacles: orange triangle, insulated EGC.
+- Face upward/downward debates are mostly preference; wet location "in use" covers are Code.
+
+Receptacle ratings vs circuit ratings: a single receptacle on a 20 A circuit must be 20 A; multiple 15 A receptacles are permitted on 20 A branch circuits under the usual rules.
+
+## Luminaires (Article 410)
+
+Themes:
+
+- Listed for the location (damp, wet, closet, recessed)
+- Closet luminaire clearance from storage space
+- Recessed IC vs non-IC ratings and thermal protection
+- Fixture whips, polarity, and grounding of metal luminaires
+- Track lighting load calculations / limitations
+- LED drivers and remote power supplies as Class 2 vs line-voltage — follow listing
+
+Bathroom luminaires near showers/tubs have zone rules (often overlapping with 410 and sometimes 680 for pools/tubs). Outdoor luminaires need wet-location listing where exposed.
+
+## Appliances (Article 422)
+
+Nameplate current or VA drives branch-circuit sizing. Continuous appliances use 125% logic. Disconnecting means may be the branch-circuit breaker if within sight / lockable per rules, or a local switch.
+
+Examples: water heaters, dishwashers, disposals, trash compactors, microwaves. Flexible cords permitted only where the appliance article allows.
+
+## Space Heating (Article 424)
+
+Fixed electric heating often calculates at continuous 125%. Unit ratings, disconnects, and special branch-circuit rules appear. Do not treat baseboard heaters like general lighting demand factors unless the optional calculation paths say so.
+
+## General-Use Equipment Odds and Ends
+
+Expect scattered questions on:
+
+- **Cord-and-plug connected** vs permanently connected equipment
+- **Disconnects in sight** of motors/appliances (definition of "in sight from")
+- **Panelboards** directories and breaker listing
+- **Show-window** and **sign** circuits (Articles 600 / 210 specialty)
+- **Office furnishings** / partitions
+- **Generators** portable vs permanently installed (Article 445 / 702)
+
+## Wiring Devices and Torque
+
+Utah's practical exam includes **torque setting**: reading fastener grade charts and setting a torque wrench. On the job and on the exam, terminations fail from under-torque (heat) and over-torque (damaged threads/conductors). Listed torque values on devices and breakers are not suggestions.
+
+## Schematic Reading
+
+Residential practical work includes doorbell / schematic wiring. Skills that transfer to the written exam:
+
+- Follow a circuit from source → control → load → return
+- Distinguish normally open vs closed contacts
+- Identify shared neutrals vs dedicated returns
+- Never energize until the examiner inspects (exam rule) — and on the job, never energize until you have verified with continuity / visual checks
+
+## Practice Problems
+
+1. Do pigtails that stay entirely inside a box usually increase box-fill conductor count?
+2. A ceiling fan will be installed. What special box requirement applies?
+3. On a three-way switch, what are the travelers connected between?
+4. Can a single 15 A receptacle be the only receptacle on a 20 A branch circuit?
+5. Why might a switch box need a neutral even if a traditional toggle switch does not use one?
+6. Recessed luminaire marked non-IC is covered with insulation in an attic. What is the hazard?
+
+### Answers
+
+1. No — internal pigtails generally do not add fill.
+2. Box (and listing) must be suitable for fan support / marked for fan support as required.
+3. Between the two three-way switches (the brass traveler terminals, typically).
+4. No — a single receptacle on a 20 A circuit must be rated 20 A.
+5. Many electronic / occupancy / smart controls require a neutral; Code requires neutrals in many switch locations.
+6. Overheating — non-IC fixtures are not listed for insulation contact; fire risk.
+
+## Looking Ahead
+
+Chapter 8 moves into **motors and controllers** and **special occupancies/equipment** — hospitals, hazardous locations, pools, and other areas where the Code gets stricter and exam questions get more specialized.
+
+---
