@@ -171,7 +171,7 @@ Bring curiosity and a calculator you know well. The exam rewards clear thinking 
 ---
 
 ## Demo
-```circuit-lab {height="800" display="none"}
+::: {.circuit-lab height="800" display="none"}
 title: Doorbell Demo Lab
 margin: 40
 passMessage: Pass — Front has its own chime; Rear and Side share the Rear chime.
@@ -277,7 +277,7 @@ demo:
     - { from: buttonSide.sig, to: terminalBlock.sig-s, color: red }
     - { from: terminalBlock.sig-s, to: terminalBlock.sig-r, color: red }
     - { from: terminalBlock.sig-r, to: chime.rear, color: red }
-```
+:::
 
 
 ## Oral assignment
